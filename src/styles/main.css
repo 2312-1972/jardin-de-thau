@@ -1,0 +1,309 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif, QT OldGoudy;
+  background: #F8F6F0;
+  color: #2B2B2B;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 2px solid #C9A24D;
+  
+}
+
+.logo {
+  height: 140px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #2F5D3A;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: #2F5D3A;
+  color: white;
+}
+
+.content {
+  padding: 50px 20%;
+}
+
+.realisations {
+  padding: 50px 20%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border: 2px solid #C9A24D;
+  padding: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background: #2F5D3A;
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+}
+/* ==== CONTACT FORM ==== */
+
+.contact-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1f3d2a, #2f5d3a);
+}
+
+.contact-card {
+  background: #f8f6f0;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  border: 2px solid #c9a24d;
+}
+
+.contact-card h2 {
+  color: #2f5d3a;
+  margin-bottom: 5px;
+}
+
+.contact-card p {
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.field {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 14px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+}
+
+.field label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  color: #777;
+  font-size: 14px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: 0.3s ease;
+  background: #f8f6f0;
+  padding: 0 6px;
+}
+
+.field textarea + label {
+  top: 22px;
+}
+
+.field input:focus + label,
+.field textarea:focus + label,
+.field input:not(:placeholder-shown) + label,
+.field textarea:not(:placeholder-shown) + label {
+  top: -8px;
+  font-size: 12px;
+  color: #2f5d3a;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #2f5d3a, #1f3d2a);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(47, 93, 58, 0.5);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(47, 93, 58, 0.7);
+}
+
+.success-message {
+  padding: 15px;
+  background: #2f5d3a;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* ==== CAROUSEL ==== */
+
+.carousel-section {
+  padding: 80px 20px;
+  background: #f8f6f0;
+  text-align: center;
+}
+
+.carousel-section h2 {
+  color: #2f5d3a;
+  margin-bottom: 30px;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Cadre qui entoure CHAQUE image */
+.carousel-frame {
+  background: white;
+  border: 3px solid #c9a24d;
+  border-radius: 18px;
+  padding: 20px;
+  max-width: 100%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-image {
+  display: block;
+  max-width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  animation: fade 0.6s ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.carousel-caption {
+  margin-top: 15px;
+  color: #2f5d3a;
+  font-weight: 600;
+}
+
+/* ==== CTA DEVIS ==== */
+
+.carousel-cta {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 14px 36px;
+  background: linear-gradient(135deg, #2f5d3a, #1f3d2a);
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 999px;
+  box-shadow: 0 12px 30px rgba(47, 93, 58, 0.45);
+  transition: all 0.3s ease;
+}
+
+.carousel-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(47, 93, 58, 0.6);
+}
+
+.carousel-cta:active {
+  transform: translateY(0);
+}
+
+
+/* Flèches  centrées */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #2f5d3a;
+  color: white;
+  border: none;
+  font-size: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.nav.left {
+  left: -22px;
+}
+
+.nav.right {
+  right: -22px;
+}
+
+.nav:hover {
+  background: #1f3d2a;
+}
+
+/* Dots */
+.dots {
+  margin-top: 18px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #c9a24d;
+  border-radius: 50%;
+  margin: 0 5px;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.dot.active {
+  opacity: 1;
+  background: #2f5d3a;
+}
