@@ -23,13 +23,13 @@ export default function Carousel() {
   const next = () => setIndex((i) => (i + 1) % slides.length);
   const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length);
 
-  /* AUTOPLAY */
+  // Autoplay
   useEffect(() => {
     const timer = setInterval(next, 5000);
     return () => clearInterval(timer);
   }, []);
 
-  /* SWIPE MOBILE */
+  // Swipe mobile
   const minSwipe = 50;
 
   const onTouchStart = (e) => {
@@ -53,28 +53,30 @@ export default function Carousel() {
       <h2>Nos services & avantages</h2>
 
       <div className="carousel">
-        <button className="nav left" onClick={prev}>‹</button>
-
         <div
           className="carousel-frame"
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
         >
+          <button className="nav left" onClick={prev} aria-label="Précédent">
+            ‹
+          </button>
+
           <img
             key={index}
             src={slides[index].src}
             alt={slides[index].caption}
             className="carousel-image"
           />
-        </div>
 
-        <button className="nav right" onClick={next}>›</button>
+          <button className="nav right" onClick={next} aria-label="Suivant">
+            ›
+          </button>
+        </div>
       </div>
 
       <p className="carousel-caption">{slides[index].caption}</p>
-     
-
 
       <div className="dots">
         {slides.map((_, i) => (
@@ -85,7 +87,10 @@ export default function Carousel() {
           />
         ))}
       </div>
-       <a href="/contact" className="carousel-cta"> Demander un devis </a>
+
+      <a href="/contact" className="carousel-cta">
+        🌿 Demander un devis
+      </a>
     </section>
   );
 }
