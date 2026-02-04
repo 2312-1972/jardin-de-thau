@@ -1,6 +1,15 @@
+@font-face {
+  font-family: "EBGaramond";
+  src: url("/src/assets/fonts/EBGaramond-VariableFont_wght.ttf") format("truetype"),
+       url("/src/assets/fonts/EBGaramond-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif, QT OldGoudy;
+  font-family: "EBGaramond",Arial, sans-serif;
   background: #F8F6F0;
   color: #2B2B2B;
 }
