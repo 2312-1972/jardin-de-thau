@@ -61,12 +61,75 @@
 }
 
 .footer-socials a:hover {
-  background: #c9a24d;
-  color: #1f3d2a;
+  /* background: #c9a24d;
+  color: #1f3d2a; */
   transform: translateY(-4px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
+/* WhatsApp */
+.footer-socials a[aria-label="WhatsApp"] {
+  background: #c9a24d;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.footer-socials a[aria-label="WhatsApp"]:hover {
+  background: #25d366; /* vert WhatsApp */
+  color: #0b3d22;
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.6);
+}
 
+/* Instagram */
+.footer-socials a[aria-label="Instagram"] {
+  background: #c9a24d;
+  animation: pulse-instagram 3s infinite;
+}
+
+.footer-socials a[aria-label="Instagram"]:hover {
+  background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
+  color: white;
+  box-shadow: 0 12px 28px rgba(225, 48, 108, 0.6);
+}
+
+/* Facebook */
+.footer-socials a[aria-label="Facebook"] {
+  background: #c9a24d;
+  animation: pulse-facebook 3s infinite;
+}
+
+.footer-socials a[aria-label="Facebook"]:hover {
+  background: #1877f2;
+  color: white;
+  box-shadow: 0 12px 28px rgba(24, 119, 242, 0.6);
+}
+
+/* LinkedIn */
+.footer-socials a[aria-label="LinkedIn"] {
+  background: #c9a24d;
+  animation: pulse-linkedin 3s infinite;
+}
+
+.footer-socials a[aria-label="LinkedIn"]:hover {
+  background: #0a66c2;
+  color: white;
+  box-shadow: 0 12px 28px rgba(10, 102, 194, 0.6);
+}
+
+/* Email */
+
+.footer-socials a[aria-label="Formulaire de contact"] {
+  background: #c9a24d;
+  animation: pulse-email 3.5s infinite;
+}
+
+.footer-socials a[aria-label="Formulaire de contact"]:hover {
+  background: red;
+  color: white;
+  box-shadow: 0 12px 28px rgba(201, 162, 77, 0.6);
+}
 .footer-bottom {
   text-align: center;
   font-size: 13px;

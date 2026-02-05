@@ -1,4 +1,4 @@
-import { FaLinkedin, FaFacebook, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaFacebook, FaInstagram, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../styles/footer.css";
 
@@ -39,10 +39,20 @@ export default function Footer() {
             <FaInstagram />
           </a>
 
-          {/* Icône mail redirige vers la page Contact */}
-          <Link to="/contact" aria-label="Contact">
+          {/* Page contact */}
+          <Link to="/contact" aria-label="Formulaire de contact">
             <FaEnvelope />
           </Link>
+
+          {/* WhatsApp direct */}
+          <a
+            href="https://wa.me/33635173408"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="WhatsApp"
+          >
+            <FaWhatsapp />
+          </a>
         </div>
       </div>
 
