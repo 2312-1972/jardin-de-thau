@@ -18,6 +18,11 @@ body {
   font-family: "EBGaramond",Arial, sans-serif;
   background: #F8F6F0;
   color: #2B2B2B;
+  background-image: url('/src/assets/images/batistou.png');
+   background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .header {
@@ -41,10 +46,6 @@ nav a {
   color: white;
   font-weight: bold;
 }
-
-
-
-
 
 .content {
   padding: 50px 20%;
@@ -192,13 +193,16 @@ button:hover {
 
 .carousel-section {
   padding: 80px 20px;
-  background: #f8f6f0;
   text-align: center;
 }
 
 .carousel-section h2 {
-  color: #2f5d3a;
+  color: #c9a24d;
+  font-weight: bold;
   margin-bottom: 30px;
+  width: 100%;
+  background-color: #ccc;
+  
 }
 
 .carousel {
@@ -319,6 +323,65 @@ button:hover {
   box-shadow: 0 18px 40px rgba(47, 93, 58, 0.6);
 }
 
+/* ===== SECTION SAVOIR-FAIRE GLASS ===== */
+
+.glass-section {
+  position: relative;
+  padding: 120px 20px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.glass-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 61, 42, 0.55); /* voile sombre */
+  backdrop-filter: blur(2px);
+}
+
+.glass-card {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  padding: 50px 60px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  text-align: center;
+}
+
+.glass-card h2 {
+  color: #f5d37a;
+  margin-bottom: 20px;
+  font-size: clamp(26px, 4vw, 42px);
+}
+
+.glass-card p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #f3f3f3;
+}
+
+.glass-card ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.glass-card li {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 14px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+}
 .services-visuals {
   padding: 80px 10%;
   background: #f8f6f0;
@@ -386,7 +449,12 @@ button:hover {
     margin-top: 8px;
   }
 }
-
+/* Responsive */
+@media (max-width: 640px) {
+  .glass-card {
+    padding: 30px 20px;
+  }
+}
 @media (max-width: 480px) {
   .nav {
     display: none;

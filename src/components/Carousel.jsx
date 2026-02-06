@@ -1,16 +1,20 @@
 import { useState, useEffect } from "react";
 
+import servicedes2 from "../assets/images/servicedes2.png";
+import servicedes1 from "../assets/images/servicedes1.png";
+import avantageService from "../assets/images/avantage-service.png";
+
 const slides = [
   {
-    src: "/src/assets/images/servicedes2.png",
+    src: servicedes2,
     caption: "Prestations de jardinage & entretien",
   },
   {
-    src: "/src/assets/images/servicedes1.png",
+    src: servicedes1,
     caption: "Avance immédiate de crédit d’impôt",
   },
   {
-    src: "/src/assets/images/avantage-service.png",
+    src: avantageService,
     caption: "Services à la personne – 50 % d’avantage fiscal",
   },
 ];
@@ -23,13 +27,11 @@ export default function Carousel() {
   const next = () => setIndex((i) => (i + 1) % slides.length);
   const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length);
 
-  // Autoplay
   useEffect(() => {
     const timer = setInterval(next, 5000);
     return () => clearInterval(timer);
   }, []);
 
-  // Swipe mobile
   const minSwipe = 50;
 
   const onTouchStart = (e) => {
@@ -50,8 +52,6 @@ export default function Carousel() {
 
   return (
     <section className="carousel-section">
-      <h2>Nos services & avantages</h2>
-
       <div className="carousel">
         <div
           className="carousel-frame"

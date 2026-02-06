@@ -4,32 +4,39 @@ import pelle from "../assets/images/pelle.jpeg"
 import coupe from "../assets/images/coupe.jpeg"
 import tronconne from "../assets/images/tronconne.jpeg"
 import taille from "../assets/images/taille.jpeg"
- import tondre from "../assets/images/tondre.jpeg"
+import tondre from "../assets/images/tondre.jpeg"
+// import batistou from "../assets/images/batistou.png"
 
 export default function Home() {
   return (
     <>
        
   
-      <Carousel />
-      <section className="content">
-        <h2>Notre savoir-faire</h2>
-        <p>
-          Jardin de Thau met son expertise au service de vos extérieurs :
-          entretien, création paysagère et aménagement sur mesure.
-        </p>
+     
+      <section 
+  className="content glass-section"
+  // style={{ backgroundImage: `url(${batistou})` }}
+>
+  <div className="glass-card">
+    <h2>Notre savoir-faire</h2>
+    <p>
+      Jardin de Thau met son expertise au service de vos extérieurs :
+      entretien, création paysagère et aménagement sur mesure.
+    </p>
 
-        <ul>
-          <li>🌿 Entretien de jardins</li>
-          <li>🌳 Taille d’arbres et arbustes</li>
-          <li>🪴 Création paysagère</li>
-          <li>🪨 Aménagements extérieurs</li>
-        </ul>
-      </section>
+    <ul>
+      <li>🌿 Entretien de jardins</li>
+      <li>🌳 Taille d’arbres et arbustes</li>
+      <li>🪴 Création paysagère</li>
+      <li>🪨 Aménagements extérieurs</li>
+      <li>💧 Arrosage & irrigation</li>
+     <li>🔥 Débroussaillage & prévention incendie</li>
+    </ul>
+  </div>
+</section>
+ <Carousel />
 <section className="services-visuals">
-  {/* <h2>Nos prestations en images</h2> */}
-
-  <div className="services-grid">
+ <div className="services-grid">
     <div className="service-card">
       <img src={herbe} alt="Entretien de pelouse" />
       <p >Entretien du jardin</p>
@@ -63,7 +70,7 @@ export default function Home() {
 </section>
 
       <section className="realisations">
-        <h2>Nos réalisations</h2>
+        <h2 style={{color:'#c9a24d'}}>Nos réalisations</h2>
         <div className="grid">
           <div className="card">Jardin méditerranéen</div>
           <div className="card">Entretien annuel</div>
