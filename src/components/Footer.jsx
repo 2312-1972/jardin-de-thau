@@ -22,7 +22,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://www.facebook.com/groups/596429257115464/user/1358590834?locale=fr_FR"
+            href="https://www.facebook.com/share/1CAc2Q849z/"
             target="_blank"
             rel="noreferrer"
             aria-label="Facebook"
