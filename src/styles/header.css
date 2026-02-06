@@ -5,6 +5,8 @@
   top: 0;
   z-index: 100;
   backdrop-filter: blur(8px);
+    padding-top: clamp(8px, 2vw, 20px);
+  padding-bottom: clamp(8px, 2vw, 20px);
   background: linear-gradient(
     135deg,
     rgba(31, 61, 42, 0.85),
@@ -23,15 +25,17 @@
 }
 
 .logo {
-  height: 150px;
+  height: clamp(60px, 12vw, 150px);
   filter: drop-shadow(0 6px 15px rgba(0, 0, 0, 0.35));
 }
 
+
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: clamp(24px, 6vw, 80px) 16px;
   color: white;
 }
+
 
 .hero-h1 {
   font-size: clamp(28px, 5vw, 60px);
@@ -93,25 +97,63 @@
   width: 70%;
 }
 
+/* Animation fluide */
+.header,
+.logo,
+.hero,
+.hero-h1,
+.hero-p {
+  transition: all 0.3s ease;
+}
+
+/* Etat shrink */
+.header.shrink {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  backdrop-filter: blur(6px);
+}
+
+.header.shrink .logo {
+  height: 60px;
+}
+
+.header.shrink .hero {
+  padding: 16px 10px;
+}
+
+.header.shrink .hero-h1 {
+  font-size: 22px;
+}
+
+.header.shrink .hero-p {
+  font-size: 12px;
+}
+
 /* Responsive header */
 
 @media (max-width: 640px) {
-  .logo {
-    height: 70px;
+  .hero {
+    padding: 20px 12px;
   }
 
-  .nav {
-    gap: 10px;
+  .hero-h1 {
+    font-size: 26px;
   }
 
-  .nav-link {
+  .hero-p {
     font-size: 14px;
-    padding: 6px 10px;
   }
+
+  .logo {
+    height: 64px;
+  }
+
+  
 }
 
-@media (max-width: 480px){
-.hero-gsm {
- padding-top: 5px; 
-};
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 12px;
+  }
 }
