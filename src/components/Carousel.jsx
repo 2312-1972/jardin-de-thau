@@ -65,7 +65,7 @@ export default function Carousel() {
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
         >
-          <button className="nav left" onClick={prev} aria-label="Précédent">
+          <button className="carousel-nav left" onClick={prev} aria-label="Précédent">
             ‹
           </button>
 
@@ -76,7 +76,7 @@ export default function Carousel() {
             className="carousel-image"
           />
 
-          <button className="nav right" onClick={next} aria-label="Suivant">
+          <button className="carousel-nav right" onClick={next} aria-label="Suivant">
             ›
           </button>
         </div>

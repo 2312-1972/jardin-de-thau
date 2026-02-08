@@ -25,7 +25,7 @@ body {
   background-attachment: fixed;
 }
 
-.header {
+/* .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,7 +45,7 @@ nav a {
   text-decoration: none;
   color: white;
   font-weight: bold;
-}
+} */
 
 .content {
   padding: 50px 20%;
@@ -245,7 +245,7 @@ button:hover {
 }
 
 /* Flèches */
-.nav {
+.carousel-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -264,15 +264,15 @@ button:hover {
   z-index: 2;
 }
 
-.nav.left {
+.carousel-nav.left {
   left: -20px;   /* collée au cadre */
 }
 
-.nav.right {
+.carousel-nav.right {
   right: -20px;
 }
 
-.nav:hover {
+.carousel-nav:hover {
   background: #1f3d2a;
 }
 
@@ -475,7 +475,7 @@ button:hover {
     height: 140px;
   }
 
-  nav {
+  .carousel-nav {
     justify-content: center;
     margin-top: 8px;
   }
@@ -487,7 +487,7 @@ button:hover {
   }
 }
 @media (max-width: 480px) {
-  .nav {
+  carousel-.nav {
     display: none;
   }
 

@@ -1,0 +1,14 @@
+.hero {
+  text-align: center;
+  padding: clamp(60px, 12vw, 120px) 16px;
+  color: white;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 6vw, 56px);
+  color: #f5d37a;
+}
+
+.hero p {
+  font-size: clamp(14px, 3vw, 22px);
+}
