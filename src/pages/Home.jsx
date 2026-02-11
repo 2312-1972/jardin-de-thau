@@ -5,7 +5,7 @@ import coupe from "../assets/images/coupe.jpeg"
 import tronconne from "../assets/images/tronconne.jpeg"
 import taille from "../assets/images/taille.jpeg"
 import tondre from "../assets/images/tondre.jpeg"
-// import batistou from "../assets/images/batistou.png"
+
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
      
       <section 
   className="content glass-section"
-  // style={{ backgroundImage: `url(${batistou})` }}
+  
 >
   <div className="glass-card">
     <h2>Notre savoir-faire</h2>
