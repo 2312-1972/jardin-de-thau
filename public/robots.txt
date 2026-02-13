@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jardindethau.netlify.app/sitemap.xml
+Sitemap: https://jardindethau.fr/sitemap.xml
