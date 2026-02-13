@@ -18,10 +18,10 @@ export default function Contact() {
   };
 
   return (
-    <section className="contact-container">
+    <section className="contact-container ">
       <div className="contact-card">
         <h2>Contactez-nous</h2>
-        <p>Un projet ? Une question ? Parlons-en 🌿</p>
+        <p>Un projet ?  Une question ?  Parlons-en 🌿</p>
 
         {sent ? (
           <div className="success-message">
@@ -41,7 +41,7 @@ export default function Contact() {
 
             <div className="field">
               <input type="text" name="name" required />
-              <label>Nom</label>
+              <label >Nom</label>
             </div>
 
             <div className="field">
