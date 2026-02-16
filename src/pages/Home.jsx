@@ -75,12 +75,12 @@ export default function Home() {
 
           <div className="service-card">
             <img src={coupe} alt="Taille et élagage d’arbres" />
-            <p>Taille & élagage</p>
+            <p>débroussaillage</p>
           </div>
 
           <div className="service-card">
             <img src={tronconne} alt="Abattage d’arbres et débroussaillage" />
-            <p>Abattage & débroussaillage</p>
+            <p>Abattage & élagage</p>
           </div>
         </div>
       </section>
