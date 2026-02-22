@@ -42,6 +42,9 @@ function HeaderInner() {
           >
             Accueil
           </NavLink>
+          <NavLink to="/realisations" className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>
+            Réalisations
+          </NavLink>
 
           <NavLink
             to="/contact"
@@ -84,6 +87,14 @@ function HeaderInner() {
           className={({ isActive }) => `mobile-link ${isActive ? "active" : ""}`}
         >
           Accueil
+        </NavLink>
+
+          <NavLink
+          to="/realisations"
+          onClick={closeMenu}
+          className={({ isActive }) => `mobile-link ${isActive ? "active" : ""}`}
+        >
+          Realisations
         </NavLink>
 
         <NavLink

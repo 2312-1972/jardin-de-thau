@@ -68,14 +68,15 @@ body {
   padding: 15px;
   cursor: pointer;
 }
-/* ==== CONTACT FORM ==== */
+/* ==== CONTACT FORM ====  commenté suite a créa contact.css */
 
-.contact-container {
+/* .contact-container {
   min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: linear-gradient(135deg, #1f3d2a, #2f5d3a);  */
+  margin-top: 50px;
+ 
   
 }
 
@@ -171,6 +172,45 @@ button:hover {
   border-radius: 10px;
   font-weight: bold;
 }
+.contact-video {
+  margin-top: 28px;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.contact-video h3 {
+  margin: 0 0 12px;
+  font-size: clamp(16px, 2.2vw, 20px);
+  color: #1f3d2a;
+  font-weight: 700;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; 
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.contact-video-caption {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  color: #1f3d2a;
+} */
 
 /* ==== CAROUSEL ==== */
 

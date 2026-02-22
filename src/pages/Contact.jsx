@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useHead } from "@unhead/react";
+import "../styles/contact.css"
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
 
-  // 👉 SEO de la page Contact
   useHead({
     title: "Contact | Jardin de Thau – Montbazin (34)",
     link: [{ rel: "canonical", href: "https://jardindethau.fr/contact" }],
@@ -60,23 +60,44 @@ export default function Contact() {
             />
 
             <div className="field">
-              <input type="text" name="name" required />
+              <input type="text" name="name" required placeholder=" " />
               <label>Nom</label>
             </div>
 
             <div className="field">
-              <input type="email" name="email" required />
+              <input type="email" name="email" required placeholder=" " />
               <label>Email</label>
             </div>
 
             <div className="field">
-              <textarea name="message" rows="4" required />
+              <textarea name="message" rows="4" required placeholder=" " />
               <label>Message</label>
             </div>
 
             <button type="submit">Envoyer le message</button>
           </form>
         )}
+
+        {/* ✅ Vidéo SOUS le formulaire */}
+        <div className="contact-video">
+          <h3>Découvrez vos aides à la personne </h3>
+
+          <div className="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/_4tp5zCnHy8"
+              title="Présentation Jardin de Thau"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
+
+          <h3 className="contact-video-caption">
+            🌿 Le service d'avance immédiate de crédit d'impôts
+          </h3>
+        </div>
       </div>
     </section>
   );
