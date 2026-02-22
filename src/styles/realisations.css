@@ -22,6 +22,7 @@
 
 .realisations-search input::placeholder {
   opacity: 0.7;
+  color: bisque;
 }
 
 /* Layout page */
@@ -96,6 +97,7 @@
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.14);
   backdrop-filter: blur(10px);
+  
 }
 
 .real-desc {

@@ -1,5 +1,5 @@
-// src/components/BeforeAfterSlider.jsx
 import { useMemo, useRef, useState } from "react";
+import "../styles/realisations.css";
 
 /**
  * Avant (gauche) / Après (droite)
