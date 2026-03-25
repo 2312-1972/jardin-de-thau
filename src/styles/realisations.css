@@ -317,10 +317,81 @@
 }
 
 /* ================================
-   AJUSTEMENTS OPTIONNELS
+   WRAPPER SLIDER + ACTIONS
    ================================ */
 
-/* Si certaines cartes ont encore visuellement 1 ou 2 px d'écart */
-.real-card > * {
+.ba-wrapper {
   width: 100%;
+}
+
+.ba-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.ba-action-btn {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+  width: 120px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: transform 0.2s ease, background 0.2s ease;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.ba-action-btn:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.ba-action-btn:focus-visible {
+  outline: 2px solid rgba(201, 162, 77, 0.45);
+  outline-offset: 2px;
+}
+
+/* ================================
+   LIGHTBOX / PLEIN ÉCRAN
+   ================================ */
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.lightbox-image {
+  max-width: 95vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 999px;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }

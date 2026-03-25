@@ -11,7 +11,8 @@ export default function BeforeAfterSlider({
   after,
   altBefore = "Avant",
   altAfter = "Après",
-  initialPct = 50, // position du séparateur (0=full Avant, 100=full Après)
+  initialPct = 50,
+  onOpenImage,
 }) {
   const [pct, setPct] = useState(initialPct);
   const ref = useRef(null);
@@ -46,13 +47,9 @@ export default function BeforeAfterSlider({
     }
   };
 
-  // IMPORTANT :
-  // On affiche AFTER en dessous (plein écran).
-  // On affiche BEFORE au-dessus, mais on le "coupe" depuis la droite
-  // => la partie gauche reste "Avant", la partie droite laisse apparaître "Après".
   const beforeClipStyle = useMemo(
     () => ({
-      clipPath: `inset(0 ${100 - pct}% 0 0)`, // coupe depuis la droite
+      clipPath: `inset(0 ${100 - pct}% 0 0)`,
     }),
     [pct]
   );
@@ -60,49 +57,71 @@ export default function BeforeAfterSlider({
   const handleStyle = useMemo(() => ({ left: `${pct}%` }), [pct]);
 
   return (
-    <div
-      className="ba-slider"
-      ref={ref}
-      role="group"
-      aria-label="Comparateur Avant / Après"
-      onPointerDown={onPointerDown}
-      onPointerMove={onPointerMove}
-      onPointerUp={onPointerUp}
-      onPointerCancel={onPointerUp}
-    >
-      {/* AFTER (plein écran en dessous) */}
-      <img className="ba-img" src={after} alt={altAfter} />
+    <div className="ba-wrapper">
+      <div
+        className="ba-slider"
+        ref={ref}
+        role="group"
+        aria-label="Comparateur Avant / Après"
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        onPointerCancel={onPointerUp}
+      >
+        {/* AFTER (plein écran en dessous) */}
+        <img className="ba-img" src={after} alt={altAfter} />
 
-      {/* BEFORE (au-dessus, coupé) */}
-      <img
-        className="ba-img ba-before"
-        src={before}
-        alt={altBefore}
-        style={beforeClipStyle}
-      />
+        {/* BEFORE (au-dessus, coupé) */}
+        <img
+          className="ba-img ba-before"
+          src={before}
+          alt={altBefore}
+          style={beforeClipStyle}
+        />
 
-      {/* Handle */}
-      <div className="ba-handle" style={handleStyle} aria-hidden="true">
-        <span className="ba-line" />
-        <span className="ba-knob">↔</span>
+        {/* Handle */}
+        <div className="ba-handle" style={handleStyle} aria-hidden="true">
+          <span className="ba-line" />
+          <span className="ba-knob">↔</span>
+        </div>
+
+        {/* Badges */}
+        <div className="ba-badges" aria-hidden="true">
+          <span className="ba-badge">Avant</span>
+          <span className="ba-badge">Après</span>
+        </div>
+
+        {/* Range (clavier) */}
+        <input
+          className="ba-range"
+          type="range"
+          min="0"
+          max="100"
+          value={Math.round(pct)}
+          onChange={(e) => setPct(Number(e.target.value))}
+          aria-label="Position du séparateur"
+        />
       </div>
 
-      {/* Badges */}
-      <div className="ba-badges" aria-hidden="true">
-        <span className="ba-badge">Avant</span>
-        <span className="ba-badge">Après</span>
-      </div>
+      {/* Actions */}
+      <div className="ba-actions">
+        <button
+          type="button"
+          className="ba-action-btn"
+          onClick={() => onOpenImage?.(before, altBefore)}
+        >
+          
+          Voir avant
+        </button>
 
-      {/* Range (clavier) */}
-      <input
-        className="ba-range"
-        type="range"
-        min="0"
-        max="100"
-        value={Math.round(pct)}
-        onChange={(e) => setPct(Number(e.target.value))}
-        aria-label="Position du séparateur"
-      />
+        <button
+          type="button"
+          className="ba-action-btn"
+          onClick={() => onOpenImage?.(after, altAfter)}
+        >
+          Voir après
+        </button>
+      </div>
     </div>
   );
 }
