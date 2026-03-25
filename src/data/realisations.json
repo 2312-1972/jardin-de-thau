@@ -17,8 +17,18 @@
     "tags": ["Taille", "Entretien", "Haies","Terrasse exterieur", "Piscine"],
     "beforeImage": "/realisations/terrasse-avant.jpg",
     "afterImage": "/realisations/terrasse-apres.jpg",
-    "description": "Taille complète des haies et nettoyage du massif. Évacuation des déchets verts et finitions, création d'une terrase bois en bord de piscine."
+    "description": "Taille des haies et création d'une terrase bois en bord de piscine."
   }
-  
+  ,
+  {
+    "id": "chantier-003",
+    "title": "Amenagement de jardin",
+    "location": "Montpellier (34)",
+    "date": "20-03-2026",
+    "tags": ["Pelouse", "Aménagement", "Plantes","Terrasse exterieur", "Piscine"],
+    "beforeImage": "/realisations/jardinmontpellierav.jpeg",
+    "afterImage": "/realisations/jardinmontpellierap2.jpeg",
+    "description": " Aménagegement d'un espace vert avec engazonnement, en bord de piscine."
+  }
 ]
 
