@@ -1,5 +1,5 @@
 /* ================================
-   REALISATIONS PAGE 
+   REALISATIONS PAGE
    ================================ */
 
 /* Section haut (titre + recherche) */
@@ -36,10 +36,11 @@
   margin: 0 auto;
   display: grid;
   gap: 22px;
- grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: stretch;
 }
 
+/* Colonnes */
 @media (max-width: 980px) {
   .realisations-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -56,61 +57,94 @@
     gap: 16px;
   }
 }
-@media (min-width: 1200px){
-  .real-card{
+
+/* Desktop large */
+@media (min-width: 1200px) {
+  .real-card {
     padding: 22px;
   }
-  .ba-slider{
-    height: 320px;                /* images + grandes */
+
+  .ba-slider {
+    height: 320px;
   }
-  .real-desc{
+
+  .real-desc {
     font-size: 15px;
   }
 }
-/* Card */
+
+/* ================================
+   CARD
+   ================================ */
+
 .real-card {
   padding: 18px;
-  overflow: hidden; /* IMPORTANT : empêche tout débordement (slider, images, etc.) */
-   display: flex;
+  overflow: hidden;
+  display: flex;
   flex-direction: column;
   height: 100%;
+  box-sizing: border-box;
+}
+
+/* Bloc haut réservé pour homogénéiser */
+.real-card-head {
+  min-height: 72px;
 }
 
 .real-card-head h3 {
   margin: 0 0 6px;
   font-size: clamp(16px, 1.6vw, 20px);
   line-height: 1.15;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .real-meta {
   margin: 0 0 10px;
   opacity: 0.85;
   font-size: 14px;
+  min-height: 36px;
+  display: flex;
+  align-items: flex-start;
 }
 
+/* Bloc tags réservé */
 .real-tags {
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
   gap: 8px;
   margin-bottom: 12px;
+  min-height: 42px;
 }
 
 .tag {
   font-size: 12px;
+  line-height: 1.2;
   padding: 6px 10px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.14);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  
+  white-space: nowrap;
 }
 
+/* Description homogène */
 .real-desc {
   margin: 12px 0 0;
   line-height: 1.6;
   opacity: 0.92;
   font-size: 14px;
+  min-height: 68px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* Message "aucun résultat" */
@@ -121,8 +155,9 @@
 }
 
 /* ================================
-   MODE "2 IMAGES" 
+   MODE "2 IMAGES"
    ================================ */
+
 .before-after {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -162,10 +197,11 @@
   font-size: 13px;
   opacity: 0.9;
   text-align: center;
+  min-height: 40px;
 }
 
 /* ================================
-   SLIDER AVANT / APRÈS 
+   SLIDER AVANT / APRÈS
    ================================ */
 
 /* Wrapper slider */
@@ -177,8 +213,9 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.14);
   background: rgba(0, 0, 0, 0.10);
-  touch-action: none; /* important pour le drag mobile */
+  touch-action: none;
   margin: 12px 0 0;
+  flex-shrink: 0;
 }
 
 @media (max-width: 640px) {
@@ -200,24 +237,24 @@
   pointer-events: none;
 }
 
-/* découpe de l'image "après" */
+/* Découpe de l'image "après" */
 .ba-after-clip {
   position: absolute;
   inset: 0;
   overflow: hidden;
 }
 
-/* poignée */
+/* Poignée */
 .ba-handle {
   position: absolute;
   top: 0;
   bottom: 0;
   transform: translateX(-50%);
   width: 0;
-  pointer-events: none; /* le drag se fait sur .ba-slider */
+  pointer-events: none;
 }
 
-/* ligne verticale */
+/* Ligne verticale */
 .ba-line {
   position: absolute;
   top: 0;
@@ -228,9 +265,9 @@
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
 }
 
-/* bouton au centre */
+/* Bouton au centre */
 .ba-knob {
-  pointer-events: auto; /* focus/clavier */
+  pointer-events: auto;
   position: absolute;
   top: 50%;
   left: 0;
@@ -245,37 +282,45 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   outline: none;
 }
 
 .ba-knob:focus {
   box-shadow:
     0 0 0 3px rgba(201, 162, 77, 0.25),
-    0 10px 30px rgba(0,0,0,0.25);
+    0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
-/* badges "Avant" / "Après" */
-.ba-badges{
-  position:absolute;
-  left:12px;
-  right:12px;
-  bottom:12px;
-  top:auto;
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-  pointer-events:none;
+/* Badges "Avant" / "Après" */
+.ba-badges {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  top: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  pointer-events: none;
 }
 
-.ba-badge{
-  font-size:11px;
-  padding:6px 9px;
-  border-radius:999px;
-  background: rgba(0,0,0,0.18);
-  border: 1px solid rgba(255,255,255,0.14);
+.ba-badge {
+  font-size: 11px;
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  opacity:0.85;
+  opacity: 0.85;
 }
 
+/* ================================
+   AJUSTEMENTS OPTIONNELS
+   ================================ */
+
+/* Si certaines cartes ont encore visuellement 1 ou 2 px d'écart */
+.real-card > * {
+  width: 100%;
+}
