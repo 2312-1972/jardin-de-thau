@@ -211,7 +211,7 @@
   height: 260px;
   border-radius: 18px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 2px solid whitesmoke;
   background: rgba(0, 0, 0, 0.10);
   touch-action: none;
   margin: 12px 0 0;
@@ -333,7 +333,7 @@
 
 .ba-action-btn {
   appearance: none;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid #c9a24d;
   background: rgba(255, 255, 255, 0.08);
   color: inherit;
   width: 120px;
@@ -385,7 +385,8 @@
   right: 22px;
   width: 44px;
   height: 44px;
-  border: none;
+  border: 1px solid #c9a24d;
+  padding: 0px;
   border-radius: 999px;
   font-size: 28px;
   line-height: 1;
