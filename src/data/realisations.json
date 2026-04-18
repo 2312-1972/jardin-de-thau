@@ -29,6 +29,36 @@
     "beforeImage": "/realisations/jardinmontpellierav.jpeg",
     "afterImage": "/realisations/jardinmontpellierap2.jpeg",
     "description": " Aménagegement d'un espace vert avec engazonnement, en bord de piscine"
+  },
+  {
+    "id": "chantier-004",
+    "title": "Amenagement de jardin",
+    "location": "Cournonterral (34)",
+    "date": "09-04-2026",
+    "tags": ["Pelouse", "Aménagement", "Yucca","Terrasse exterieur", "Olivier"],
+    "beforeImage": "/realisations/yuccaav.jpeg",
+    "afterImage": "/realisations/yuccaap.jpeg",
+    "description": " Taille des oliviers et des arbres d'ornement comme ce 'Yucca elephantipes'"
+  },
+  {
+    "id": "chantier-005",
+    "title": "Taille d'un Olivier",
+    "location": "Gigean (34)",
+    "date": "10-04-2026",
+    "tags": [ "Aménagement", "Olivier","Terrasse exterieur", "Piscine"],
+    "beforeImage": "/realisations/olivierav.jpeg",
+    "afterImage": "/realisations/olivierap.jpeg",
+    "description": " Taille d'un Olivier en bordure de piscine"
+  },
+  {
+    "id": "chantier-006",
+    "title": "Entretien Hotel Martinez ",
+    "location": "Balaruc les Bains (34)",
+    "date": "14 et 15-04-2026",
+    "tags": ["Haies", "Lierres", "Plantes","Terrasse exterieur"],
+    "beforeImage": "/realisations/martav.jpeg",
+    "afterImage": "/realisations/martap.jpeg",
+    "description": " Entretien des espaces verts à l'hotel Martinez à Balaruc les bains"
   }
 ]
 
